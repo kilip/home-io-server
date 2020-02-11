@@ -1,5 +1,12 @@
 version: "3"
 services:
+  named:
+    container_name: io.named
+    build:
+      context: ./etc/bind9
+    network_mode: host
+    volumes:
+      - ./etc/bind9/config:/named
   squid:
     container_name: io.squid
     build:
