@@ -9,5 +9,5 @@ if [ ! -f "$FILE" ]; then
 fi
 
 
-/usr/bin/squid -NYCd 1 -f /etc/squid/squid.conf > /dev/null
+/usr/bin/squid -NYCd 1 -f /etc/squid/squid.conf
 tail -f /var/log/squid/access.log
